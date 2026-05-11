@@ -33,7 +33,6 @@ int main(){
         if(max<count){
             max = count;
             idxmax = i;
-            printf("max %d: %d\n", idxmax, count);
         }else if(max==count){
             idxmax=idxmax;
         }
