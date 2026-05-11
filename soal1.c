@@ -21,7 +21,7 @@ int main(){
         }
     }
 
-    int idxiso=0;
+    int idxiso=999;
     int count=0, max=0, idxmax=0;
     for(i = 0; i<N; i++){ //hitung derajat simpul
         for (j = 0; j < N; j++){
@@ -42,7 +42,11 @@ int main(){
         count = 0;
     }
     printf("MAX_VERTEX %d\n", idxmax);
-    printf("ISOLATED %d\n", idxiso);
+    if(idxiso==999){
+        printf("ISOLATED NONE\n");
+    }else{
+        printf("ISOLATED %d\n", idxiso);
+    }
     
     return 0;
 }
