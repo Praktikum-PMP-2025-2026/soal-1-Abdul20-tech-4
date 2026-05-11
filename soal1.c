@@ -49,9 +49,9 @@ int main(){
     }
     printf("MAX_VERTEX %d\n", idxmax);
     if(idxiso==999){
-        printf("ISOLATED NONE\n");
+        printf("ISOLATED NONE");
     }else{
-        printf("ISOLATED %d\n", idxiso);
+        printf("ISOLATED %d", idxiso);
     }
     
     return 0;
