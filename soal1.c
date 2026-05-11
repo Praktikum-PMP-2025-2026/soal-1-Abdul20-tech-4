@@ -33,8 +33,9 @@ int main(){
         if(max<count){
             max = count;
             idxmax = i;
+            printf("max %d: %d\n", idxmax, count);
         }else if(max==count){
-            idxmax=0;
+            idxmax=idxmax;
         }
         if (count == 0){
             if (idxiso == 999){
@@ -42,8 +43,6 @@ int main(){
             }else{
                 idxiso=idxiso;
             }
-            
-            
         }
         count = 0;
     }
