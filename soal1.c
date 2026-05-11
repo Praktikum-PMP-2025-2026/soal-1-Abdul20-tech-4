@@ -5,6 +5,8 @@
  *   Nama File           : Prak5.c
  *   Deskripsi           : Program untuk menghitung derajat suatu baris, jumlah simpul maksimum, dan jumlah simpul terisolasi
  *                         Input dari program adalah nilai
+ *   Referensi           : https://zulfikaralif7.blogspot.com/2017/01/program-c-matriks.html
+ *                         https://gist.github.com/novalagung/8111601
  */
 
 #include <stdio.h>
