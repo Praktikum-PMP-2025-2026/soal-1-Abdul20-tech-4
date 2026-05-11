@@ -37,7 +37,13 @@ int main(){
             idxmax=0;
         }
         if (count == 0){
-            idxiso=i;
+            if (idxiso == 999){
+                idxiso = i;
+            }else{
+                idxiso=idxiso;
+            }
+            
+            
         }
         count = 0;
     }
