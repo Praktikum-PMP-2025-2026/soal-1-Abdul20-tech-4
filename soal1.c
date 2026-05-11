@@ -10,51 +10,39 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#define SIZE 256
-
-void tampilkanMatriks(int a[256][256], int N){
-    
-}
 
 int main(){
-    int i, j, N, a[256][256];
+    int i, j, N, a[256][256], k, l;
     scanf("%d",&N);
     
-    for(i = 0; i<N; i++){ //input matriks
-        for (j = 0; j < N; j++){
-            scanf("%d", &a[i][j]);
+    for(k = 0; k<N; k++){ //input matriks
+        for (l = 0; l < N; l++){
+            scanf("%d", &a[k][l]);
         }
     }
 
+    int idxiso=0;
     int count=0, max=0, idxmax=0;
     for(i = 0; i<N; i++){ //hitung derajat simpul
-        count = 0;
         for (j = 0; j < N; j++){
             if (a[i][j]==1){
                 count = count+1;
             }
         }
-        printf("DEGREE %D %D\n", i, count);
+        printf("DEGREE %d %d\n", i, count);
         if(max<count){
-            idxmax = j-1;
+            max = count;
+            idxmax = i;
         }else if(max==count){
             idxmax=0;
         }
+        if (count == 0){
+            idxiso=i;
+        }
+        count = 0;
     }
     printf("MAX_VERTEX %d\n", idxmax);
-
-
-    int idxiso=0;
-    for(i = 0; i<N; i++){ //cek vertex terisolasi
-        int count1 = 0;
-        for (j = 0; j < N; j++){
-            count1 = count1 + a[i][j];
-        }
-        if(count1==0){
-            idxiso=j;
-            break;
-        }
-    }
-    printf("ISOLATED %d\n", idxiso-1);
+    printf("ISOLATED %d\n", idxiso);
+    
     return 0;
 }
